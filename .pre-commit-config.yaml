@@ -1,4 +1,9 @@
 repos:
+  - repo: https://github.com/cheshirekow/cmake-format-precommit
+    rev: v0.6.10
+    hooks:
+    - id: cmake-format
+    - id: cmake-lint
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
@@ -9,3 +14,6 @@ repos:
     rev: v1.3.5
     hooks:
       - id: clang-format
+        args: [-i]
+      - id: clang-tidy
+        args: [-p=/home/patrick/repos/Matrices/MatrixLibrary/build, -fix]

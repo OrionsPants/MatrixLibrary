@@ -6,7 +6,7 @@ TEST(dummyTest, dummy)
     EXPECT_TRUE(true);
 }
 
-TEST(MatrixTest, create_and_fill)
+TEST(MatrixTest, CreateAndFill)
 {
-    Matrix<1, 1> mat{};
+    Matrix<1, 1> const mat{};
 }

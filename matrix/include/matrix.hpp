@@ -25,10 +25,10 @@ class Matrix
     }
 
    private:
-    const size_t
+    [[nodiscard]] const size_t
     IndexFromRowCol(const size_t row, const size_t col) const
     {
-        return row * Cols + col;
+        return (row * Cols) + col;
     }
 
     void

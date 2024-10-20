@@ -1,8 +1,5 @@
+include_directories(include)
 
+add_library(MatrixLib STATIC src/matrix.cpp include/matrix.hpp)
 
-file(GLOB_RECURSE MATRIX_HEADERS CONFIGURE_DEPENDS "include/*.hpp")
-file(GLOB_RECURSE MATRIX_SOURCES CONFIGURE_DEPENDS "src/*.cpp")
-
-add_library(MatrixLib STATIC ${MATRIX_SOURCES} ${MATRIX_HEADERS})
-
-target_include_directories(MatrixLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(MatrixLib PUBLIC include)
